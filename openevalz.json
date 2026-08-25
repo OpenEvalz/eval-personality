@@ -1,0 +1,54 @@
+{
+  "openevalz_version": 1,
+  "eval": {
+    "id": "personality",
+    "slug": "personality",
+    "title": "Personality",
+    "group": "Personality",
+    "tags": [],
+    "source": "core"
+  },
+  "upstream": {
+    "repo": "https://github.com/UKGovernmentBEIS/inspect_evals",
+    "path": "src/inspect_evals/personality",
+    "inspect_ai": "0.3.260",
+    "eval_version": "3-A",
+    "dependency": "personality"
+  },
+  "execution": {
+    "class": "plain",
+    "cost_class": "medium",
+    "sandbox": null,
+    "requires_internet": false,
+    "fast": false,
+    "supports_k8s": false,
+    "environment": ""
+  },
+  "tasks": [
+    {
+      "name": "personality_BFI",
+      "samples": 44
+    },
+    {
+      "name": "personality_TRAIT",
+      "samples": 8000
+    }
+  ],
+  "total_samples": 8044,
+  "external_assets": [
+    {
+      "type": "direct_url",
+      "source": "https://raw.githubusercontent.com/guiem/personality-tests/{SHA}/",
+      "state": "pinned"
+    },
+    {
+      "type": "huggingface",
+      "source": "mirlab/TRAIT",
+      "state": "pinned"
+    }
+  ],
+  "scaffolds": [
+    "baseline"
+  ],
+  "generated": "2026-08-25"
+}
